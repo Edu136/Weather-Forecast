@@ -69,7 +69,7 @@ const Index = () => {
   }
 
   async function getTimezone(lat: number, lon: number) {
-    const response = await fetch(`http://api.timezonedb.com/v2.1/get-time-zone?key=${import.meta.env.VITE_API_KEY_HORA}&format=json&by=position&lat=${lat}&lng=${lon}`);
+    const response = await fetch(`https://api.timezonedb.com/v2.1/get-time-zone?key=${import.meta.env.VITE_API_KEY_HORA}&format=json&by=position&lat=${lat}&lng=${lon}`);
 
     if(!response.ok) throw new Error('Erro ao buscar fuso horário');
     const data = await response.json();
